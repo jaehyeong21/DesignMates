@@ -1,0 +1,19 @@
+.element{
+  padding : 15px;
+}
+
+.element__button{
+  height : 80px;
+  width : 80px;
+  background-color : tomato;
+  border : 0px;
+  margin-left : 3px;
+  border-radius : 10px;
+  cursor : pointer;
+  margin-bottom : 20px;
+}
+
+.element__button__circle, .element__button__square{
+  font-size : 40px;
+  color : white;
+}

@@ -1,0 +1,119 @@
+.design{
+  width : 100%;
+  height : 100%;
+  display : flex;
+  flex-direction : column;
+  justify-content : space-between;
+}
+
+.design__type{
+  width : 100%;
+  height : 50%;
+  border-bottom : 1px solid gray;
+}
+
+.template{
+  width : 100%;
+  height : 50%;
+  display : flex;
+  flex-direction : column;
+  justify-content : space-between;
+  align-items : center;
+}
+
+.template__inputBox{
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+}
+
+.template__input{
+  border : none;
+  height : 32px;
+  font-size : 16px;
+  border-bottom : 1px solid;
+}
+
+.temp__button{
+  width : 100%;
+}
+
+.template__button{
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  background-color : white;
+  width : 100%;
+  height : 40px;
+  border : none;
+  font-size : 20px;
+  font-weight : bold;
+  color : black;
+  cursor : pointer;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.design__type__templatebox{
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  cursor : pointer;
+  margin-top  : 10px;
+}
+
+.template1front{
+  width: 100px; /* 또는 원하는 크기로 설정 */
+  height: 70px;
+  background-image : url('./image/template1front.png');
+  background-size: cover; 
+  background-repeat: no-repeat; /* 반복 없음 */
+  background-position: center;
+  margin-right : 3px;
+}
+
+.template1back{
+    width: 100px; /* 또는 원하는 크기로 설정 */
+  height: 70px;
+  background-image : url('./image/template1back.png');
+  background-size: cover; 
+  background-repeat: no-repeat; /* 반복 없음 */
+  background-position: center;
+}
+
+.template2front{
+  width: 100px; /* 또는 원하는 크기로 설정 */
+  height: 70px;
+  background-image : url('./image/template2front.png');
+  background-size: cover; 
+  background-repeat: no-repeat; /* 반복 없음 */
+  background-position: center;
+  margin-right : 3px;
+}
+
+.template2back{
+  width: 100px; /* 또는 원하는 크기로 설정 */
+  height: 70px;
+  background-image : url('./image/template2back.png');
+  background-size: cover; 
+  background-repeat: no-repeat; /* 반복 없음 */
+  background-position: center;
+}
+
+.template3front{
+  width: 100px; /* 또는 원하는 크기로 설정 */
+  height: 70px;
+  background-image : url('./image/template3front.png');
+  background-size: cover; 
+  background-repeat: no-repeat; /* 반복 없음 */
+  background-position: center;
+  margin-right : 3px;
+}
+
+.template3back{
+  width: 100px; /* 또는 원하는 크기로 설정 */
+  height: 70px;
+  background-image : url('./image/template3back.png');
+  background-size: cover; 
+  background-repeat: no-repeat; /* 반복 없음 */
+  background-position: center;
+}

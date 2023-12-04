@@ -1,0 +1,44 @@
+.text__box{
+  width : 180px;
+  padding : 15px;
+}
+
+.text__box__font{
+  font-size : 17px;
+  font-weight : bold;
+}
+
+.text__box__input{
+  height : 30px;
+  font-size : 15px;
+  margin-bottom : 20px;
+}
+
+.text__box__button{
+  display : flex;
+  flex-direction : column;
+}
+
+.text__box__button__serif,.text__box__button__sans-serif,.text__box__button__monospace{
+  height : 35px;
+  border : 0px;
+  cursor : pointer;
+  font-size : 18px;
+  background-color : #FBF8EE;
+}
+
+.text__box__button__serif{
+  font-family: serif;
+}
+
+.text__box__button__sans-serif{
+  font-family: sans-serif;
+}
+
+.text__box__button__monospace{
+  font-family : monospace
+}
+
+.text__box__file{
+
+}

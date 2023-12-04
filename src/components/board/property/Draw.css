@@ -1,0 +1,67 @@
+.Draw{
+  display : flex;
+  justify-content : space-between;
+}
+
+.Draw__colorMu {
+  display: none; 
+}
+
+.Draw__colorMu.visible {
+  display: block; 
+}
+
+.Draw__buttonBox{
+  display : flex;
+  flex-direction : column;
+}
+
+.Draw__colorMu__width{
+  font-size : 20px;
+  font-weight : bold;
+}
+
+.Draw__buttonBox__button{
+  width : 50px;
+  cursor : pointer;
+  height : 50px;
+  background-color :#333333;
+  color : white;
+  font-size : 20px;
+}
+
+.Draw__colorMu__bar {
+  width: 100%;
+  height: 10px;
+  appearance: none;
+  background: linear-gradient(to right, #ffffff, #000000);
+  border-radius: 5px;
+  outline: none;
+}
+
+.Draw__colorMu__bar::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+}
+
+.Draw__colorMu__colorBox__custom{
+  display : block;
+}
+
+.Draw__colorMu__colorBox__select{
+  cursor : pointer;
+  border-radius : 30px;
+  width : 40px;
+  height : 40px;
+}
+
+.Draw__colorMu__colorBox{
+  width : 170px;
+  height : 300px;
+}
+

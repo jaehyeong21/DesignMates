@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Text.css';
 
 export default function Text({ onTextInput, changeText,setSelectedFont, selectedFont, fontSize, setFontSize}) {
 
@@ -12,29 +13,39 @@ export default function Text({ onTextInput, changeText,setSelectedFont, selected
 
   return (
     <div className="text">
-      <div>
-        <input
-          type="text"
-          onChange={changeText}
-          placeholder="Write and double click"
-          onDoubleClick={onTextInput}
-        />
-        <span>
-          <div>
-            <button onClick={() => handleFontChange('serif')}>serif</button>
-            <button onClick={() => handleFontChange('sans-serif')}>sans-serif</button>
-            <button onClick={() => handleFontChange('monospace')}>monospace</button>
-          </div>
-          <div>Font style: {selectedFont}</div>
+      <div className = "text__box">
+        <div className = "text__box__font">Font style: {selectedFont}</div>
+        <div className = "text__box__font">Font size: {fontSize}</div>
           <input
+            className = "Draw__colorMu__bar"
             onChange={handleFontSize}
             type="range"
             min="10"
             step = "1"
             max="50"
-            />
-            <div>Font size: {fontSize}</div>
-        </span>
+          />
+        <input
+          className = "text__box__input"
+          type="text"
+          onChange={changeText}
+          placeholder="Write and double click"
+          onDoubleClick={onTextInput}
+        />
+          <div className = "text__box__button">
+            <label className = "text__box__font">Text Style</label>
+            <button 
+              onClick={() => handleFontChange('serif')}
+              className = "text__box__button__serif">serif
+            </button>
+            <button
+              onClick={() => handleFontChange('sans-serif')}
+              className = "text__box__button__sans-serif">sans-serif
+            </button>
+            <button
+              onClick={() => handleFontChange('monospace')}
+              className = "text__box__button__monospace">monospace
+            </button>
+          </div>
       </div>
     </div>
   );
