@@ -5,6 +5,7 @@
 
 .text__box__font{
   font-size : 17px;
+  margin-bottom : 10px;
   font-weight : bold;
 }
 
@@ -19,12 +20,14 @@
   flex-direction : column;
 }
 
-.text__box__button__serif,.text__box__button__sans-serif,.text__box__button__monospace{
+.text__box__button__serif,.text__box__button__sans-serif,.text__box__button__monospace,.text__box__button__Cursive,
+.text__box__button__script{
   height : 35px;
+  color : white;
   border : 0px;
   cursor : pointer;
   font-size : 18px;
-  background-color : #FBF8EE;
+  background-color : black;
 }
 
 .text__box__button__serif{
@@ -39,6 +42,14 @@
   font-family : monospace
 }
 
+.text__box__button__Cursive{
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.text__box__button__script{
+  font-family: 'Brush Script MT', cursive;
+
+}
 .text__box__file{
 
 }

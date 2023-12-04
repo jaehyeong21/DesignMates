@@ -39,11 +39,19 @@ export default function Text({ onTextInput, changeText,setSelectedFont, selected
             </button>
             <button
               onClick={() => handleFontChange('sans-serif')}
-              className = "text__box__button__sans-serif">sans-serif
+              className = "text__box__button__sans-serif">Sans-serif
             </button>
             <button
               onClick={() => handleFontChange('monospace')}
-              className = "text__box__button__monospace">monospace
+              className = "text__box__button__monospace">Monospace
+            </button>
+            <button
+              onClick={() => handleFontChange('cursive')}
+              className = "text__box__button__Cursive">Cursive
+            </button>
+            <button
+              onClick={() => handleFontChange('script')}
+              className = "text__box__button__script">Script
             </button>
           </div>
       </div>

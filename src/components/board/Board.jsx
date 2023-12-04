@@ -417,14 +417,22 @@ export default function DrawCanvas(){
 /* -----------------템플릿 도구--------------------- */
   
 // save 저장하기
-  const saveCanvas = () => {
-    const canvas = canvasRef.current;
-    const dataUrl = canvas.toDataURL('image/png');
-    const link = document.createElement('a');
-    link.href = dataUrl;
-    link.download = 'myDrawing.png';
-    link.click();
-  };
+const saveCanvas = () => {
+  const canvas = canvasRef.current;
+  const dataUrl = canvas.toDataURL('image/png');
+
+  // Create a link element
+  const link = document.createElement('a');
+
+  // Set the href attribute to the data URL
+  link.href = dataUrl;
+
+  // Prompt the user to download the image with a specific file name
+  link.download = prompt('Enter file name', 'myDrawing') + '.png';
+
+  // Simulate a click on the link element to trigger the download
+  link.click();
+};
 
 
   return (
