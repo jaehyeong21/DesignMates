@@ -19,14 +19,19 @@
   background-color: rgba(0, 0, 0, 0.5); 
 }
 
+.modal__content__body__input{
+  background-color : #9C847B;
+}
+
 .modal__content{
-  background-color : #424242;
+  background-color : #FBF8EE;
   width : 500px;
   height : 500px;
   border-radius : 20px;
 }
 
 .modal__content__header{
+  cursor : pointer;
   display : flex;
   flex-direction : row;
   justify-content : space-between;
@@ -35,7 +40,7 @@
 
 .modal__content__header__title{
   font-size : 35px;
-  color : white;
+  color : #9C847B;
   font-weight : bold;
 }
 
@@ -44,7 +49,7 @@
 }
 
 .modal__content__body__box__label{
-  color : white;
+  color : #9C847B;
   font-size : 20px;
 }
 
@@ -64,13 +69,13 @@
 
 .modal__content__body__button{
   margin-top : 20px;
-  background-color : orange;
+  background-color : #C69774;
   color : white;
 }
 
 .modal__content__footer{
   display : flex;
-  color : white;
+  color : #9C847B;
   flex-direction : row;
   justify-content : center;
   padding : 0px 20px;
@@ -78,4 +83,5 @@
 
 .modal__content__footer__font{
   margin-left : 20px;
+  cursor : pointer;
 }

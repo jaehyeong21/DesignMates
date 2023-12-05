@@ -43,12 +43,12 @@ export default function Design({ offsetXY, setOffsetXY, information, setInformat
       <div className="" onClick={onTemplate1}>
           <div className = "design__type__templatebox">
             <div
-              className="template1front"
+              className={`template1front ${template === "template1" && front ? "selected" : ""}`}
               onClick={() => {onTemplate1(); frontTemplate();}}
             >
             </div>
             <div
-              className = "template1back"
+              className={`template1back ${template === "template1" && back ? "selected" : ""}`}
               onClick = {backTemplate}
             > 
           </div>
@@ -57,12 +57,12 @@ export default function Design({ offsetXY, setOffsetXY, information, setInformat
         <div className="" onClick={onTemplate2}>
           <div className = "design__type__templatebox">
             <div
-              className="template2front"
+              className={`template2front ${template === "template2" && front ? "selected" : ""}`}
               onClick={() => {onTemplate2(); frontTemplate();}}
             >
             </div>
             <div
-              className = "template2back"
+              className={`template2back ${template === "template2" && back ? "selected" : ""}`}
               onClick = {backTemplate}
             >
             </div>
@@ -71,12 +71,12 @@ export default function Design({ offsetXY, setOffsetXY, information, setInformat
         <div className="" onClick={onTemplate3}>
           <div className = "design__type__templatebox">
             <div
-              className="template3front"
+              className={`template3front ${template === "template3" && front ? "selected" : ""}`}
               onClick={() => {onTemplate3(); frontTemplate();}}
             >
             </div>
             <div
-              className = "template3back"
+              className={`template3back ${template === "template3" && back ? "selected" : ""}`}
               onClick = {backTemplate}
             >
             </div>

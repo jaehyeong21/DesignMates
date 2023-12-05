@@ -131,7 +131,6 @@ export default function DrawCanvas(){
       context.fillStyle = "black";
       context.fill();
       context.closePath();
-    
       context.beginPath();
       context.moveTo(100, 305) ; // 왼쪽 아래
       context.lineTo(600, 305);
