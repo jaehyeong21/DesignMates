@@ -71,6 +71,7 @@
   margin-top : 20px;
   background-color : #C69774;
   color : white;
+  cursor : pointer;
 }
 
 .modal__content__footer{

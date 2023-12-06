@@ -10,6 +10,11 @@ export default function Login() {
   const [id, setId] = useState("");
   const [pwd, setPwd] = useState("");
   const [email, setEmail] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const onLogin = () => {
+    setLoggedIn(true);
+  }
 
   const openModal = () => {
     setLoginModal(true);
@@ -31,39 +36,75 @@ export default function Login() {
     document.body.style.overflow = 'unset';
   }
 
-  const onSubmit1 = (e) => {
+  const onSubmit1 = async (e) => {
+    try {
       e.preventDefault();
-      fetch("http://localhost:3000/login.json", {
+
+      const response = await fetch("http://localhost:8081/designmates/login", {
         method: "POST",
         body: JSON.stringify({
-          userId : id,
-          password : pwd,
+          userId: id,
+          password: pwd,
         }),
-      })
-      .then((response) => response.json())
-      .then((result) => console.log(result));
-  }
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("로그인 실패");
+      }
+
+      const result = await response.json();
+      console.log(result);
+
+      if (result) {
+        closeModal();
+        alert("로그인 성공");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
 
   const onSubmit2 = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/login.json", {
+    
+    const signupURL = "http://localhost:8081/designmates/signup";
+  
+    fetch(signupURL, {
       method: "POST",
       body: JSON.stringify({
-        userId : id,
-        password : pwd,
-        userEmail : email,
+        userId: id,
+        password: pwd,
+        userEmail: email,
       }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
-    .then((response) => response.json())
-    .then((result) => console.log(result));
-}
-
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("회원가입 실패");
+        }
+        return response.json();
+      })
+      .then((result) => {
+        onLogin();
+        closeSignup();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div>
-      <span
-        className = "loginButton"
-        onClick = {openModal}
-        >Login</span>
+      {loggedIn ? (
+        <span className="loginButton">{`Welcome, ${id}!`}</span>
+      ) : (
+        <span className="loginButton" onClick={openModal}>Login</span>
+      )}
       {loginModal && (
         <div className = "modal">
           <div className = "modal__content">
