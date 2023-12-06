@@ -9,6 +9,7 @@ export default function Login() {
   const [signup, setSignup] = useState(false);
   const [id, setId] = useState("");
   const [pwd, setPwd] = useState("");
+  const [email, setEmail] = useState("");
 
   const openModal = () => {
     setLoginModal(true);
@@ -29,12 +30,9 @@ export default function Login() {
     document.body.style.overflow = 'unset';
   }
 
-  const onSubmit = (e) => {
+  const onSubmit1 = (e) => {
       e.preventDefault();
-      //2. 값을 포함해서 fetch를 사용한다.
-      //3. closemodal 사용
-      //4. 
-      fetch("https://160e-117-111-159-127.ngrok-free.app/designmates/login", {
+      fetch("", {
         method: "POST",
         body: JSON.stringify({
           userId : id,
@@ -44,6 +42,20 @@ export default function Login() {
       .then((response) => response.json())
       .then((result) => console.log(result));
   }
+
+  const onSubmit2 = (e) => {
+    e.preventDefault();
+    fetch("", {
+      method: "POST",
+      body: JSON.stringify({
+        userId : id,
+        password : pwd,
+        userEmail : email,
+      }),
+    })
+    .then((response) => response.json())
+    .then((result) => console.log(result));
+}
 
   return (
     <div>
@@ -63,7 +75,7 @@ export default function Login() {
             </div>
             <form
               className = "modal__content__body"
-              onSubmit = {onSubmit}
+              onSubmit = {onSubmit1}
             >
               <div className = "modal__content__body__box">
                 <FaRegUser className = "modal__content__body__box__label"/>
@@ -110,26 +122,27 @@ export default function Login() {
                           <IoClose/>
                       </div>
                     </div>
-                    <form className = "signup__content__form">
+                    <form className = "signup__content__form"
+                      onSubmit = {onSubmit2}>
                       <label className = "signup__content__form__label">아이디</label>
                       <input
                         className = "signup__content__form__input"
                         type = "text"
-                        /* onChange = {(e) => {setId(e.target.  value)}} */
+                        onChange = {(e) => {setId(e.target.value)}}
                         id = "userid"
                       />
                       <label className = "signup__content__form__label">비밀번호</label>
                       <input
                         className = "signup__content__form__input"
                         type = "password"
-                        /* onChange = {(e) => {setId(e.target.value)}} */
+                        onChange = {(e) => {setPwd(e.target.value)}}
                         id = "userpwd"
                       />
                       <label className = "signup__content__form__label">이메일</label>
                       <input
                         className = "signup__content__form__input"
                         type = "email"
-                        /* onChange = {(e) => {setId(e.target.  value)}} */
+                        onChange = {(e) => {setEmail(e.target.value)}}
                         id = "userpwd"
                       />
                       <div className = "signup__content__form__butbox">
