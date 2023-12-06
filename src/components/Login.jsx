@@ -15,6 +15,7 @@ export default function Login() {
     setLoginModal(true);
     document.body.style.overflow = 'hidden';
   }
+
   const closeModal = () => {
     setLoginModal(false);
     document.body.style.overflow = 'unset';
@@ -32,7 +33,7 @@ export default function Login() {
 
   const onSubmit1 = (e) => {
       e.preventDefault();
-      fetch("", {
+      fetch("http://localhost:3000/login.json", {
         method: "POST",
         body: JSON.stringify({
           userId : id,
@@ -45,7 +46,7 @@ export default function Login() {
 
   const onSubmit2 = (e) => {
     e.preventDefault();
-    fetch("", {
+    fetch("http://localhost:3000/login.json", {
       method: "POST",
       body: JSON.stringify({
         userId : id,
